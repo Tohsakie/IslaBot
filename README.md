@@ -26,20 +26,29 @@ All command must start with `!Isla` or `!isla` or `@Isla`
 ***
 ## Deployment
 ### Using docker
+#### download source code
 ```
 $ git clone https://github.com/Tohsakie/IslaBot.git
 $ cd IslaBot
 ```
+#### generate Discord & Tenor tokens
 * Create a new application <a href="https://discord.com/developers/applications">here</a> and retrieve the token  
 then replace the placeholder in the `configBot.json` file
 * Get the Tenor API token on <a href="https://tenor.com/developer/dashboard"> this link </a>  
 then replace the placeholder in the `configBot.json` file
-
-you can then build & run the container
+#### Build & Run Isla
 ```bash
 $ docker build -t isla-image .
 $ docker run -d isla-image
 ```
+#### Miscellaneous
+in case of odd behavior, restart the container
+```bash
+docker ps #find container id
+docker stop <container_id>
+docker rm -f <container_id>
+```
+***
 ### Manually
 A list of technologies used within the project:
 * [Node.JS](https://nodejs.org/en/) : Version > 12
