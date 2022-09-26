@@ -24,14 +24,26 @@ All command must start with `!Isla` or `!isla` or `@Isla`
 * `tg` => :c
 * `attaque` => Isla angry  
 ***
+## Deployment
+### Using docker
+```
+$ git clone https://github.com/Tohsakie/IslaBot.git
+$ cd IslaBot
+```
+* Create a new application <a href="https://discord.com/developers/applications">here</a> and retrieve the token  
+then replace the placeholder in the `configBot.json` file
+* Get the Tenor API token on <a href="https://tenor.com/developer/dashboard"> this link </a>  
+then replace the placeholder in the `configBot.json` file
 
-## Requirements
+you can then build & run the container
+```bash
+$ docker build -t isla-image .
+$ docker run -d isla-image
+```
+### Manually
 A list of technologies used within the project:
 * [Node.JS](https://nodejs.org/en/) : Version > 12
-
-
 ***
-
 ## Setup
 If you want to just add Isla into your server, click on this <a href="https://discord.com/oauth2/authorize?client_id=701873239135223949&scope=bot&permissions=8">link</a>.
 <br>
@@ -75,3 +87,4 @@ Improvements must be made :
 * Command in English
 
 ***
+
